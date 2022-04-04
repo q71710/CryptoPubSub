@@ -20,8 +20,8 @@ foreach($path in $paths){
 $spec = (Get-Content $specName)
 
 # 取版本號 (ex: 1.0.0 要符合此命名規範)
-$version = $spec[4].Substring($spec[4].indexof("<version>") + 9)
-$version = $version.Substring(0, $version.indexof("</version>")).split(".")
+$version = $spec[4].Substring($spec[4].indexof("<Version>") + 9)
+$version = $version.Substring(0, $version.indexof("</Version>")).split(".")
 
 if([int]$version[2] -eq 99)
 {
